@@ -5,6 +5,7 @@
     height:1100px;
     margin:0 auto;
 	display: flex;
+	margin-top: 300px;
 	
     
     
@@ -24,15 +25,23 @@
 	width: 700px;
 	height: 50px;
 	border: 1px solid red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 }
 .title-input{
-	
+	width: 700px;
+	height: 48px;
+
 }
 .content-section{
 	width: 700px;
 	height: 450px;
 	border: 1px solid red;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 
 
 }

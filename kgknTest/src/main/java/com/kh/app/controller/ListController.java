@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.kh.app.member.vo.MemberVo;
 import com.kh.app.service.BoardService;
 import com.kh.app.vo.ListVo;
 import com.kh.app.vo.PageVo;
@@ -68,7 +69,10 @@ public class ListController {
 		}
 		@PostMapping("list/boardWrite")
 		public String boardWrite(ListVo vo, HttpSession session) {
-			
+
+			MemberVo loginMember = (MemberVo) session.getAttribute("loginMember"); 
+			String writer = loginMember.getMemberId();
+			vo.setWriter(writer);
 			int result = bs.boardWrite(vo);
 			if(result == 1) {
 				return "redirect:/list/boardList?pno=1";
