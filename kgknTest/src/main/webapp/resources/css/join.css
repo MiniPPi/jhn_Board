@@ -1,0 +1,53 @@
+@charset "UTF-8";@charset "UTF-8";
+
+body{
+	background-color: #e7dbfa;
+}
+.join-main{
+    width: 400px;
+    height:auto;
+    margin:0 auto;
+	display: flex;
+	flex-direction: column;
+    
+    
+}
+
+.id-section{
+    width: 400px;
+    height: 45px;
+
+}
+.id{
+    width: 100px;
+    height: 45px;
+}
+.id-input{
+    width: 300px;
+    height: 45px;
+}
+
+.pwd-section{
+    width: 400px;
+    height: 45px;
+}
+.pwd{
+    width: 100px;
+    height: 45px;
+}
+.pwd-input{
+    width: 300px;
+    height: 45px;
+
+}
+.btn-to-join{
+    width: 400px;
+    height: 60px;
+}
+.btn-join{
+    width: 50px;
+    height: 60px;
+    border-radius: 2rem;
+    border: none;
+    margin-top: 30px;
+}

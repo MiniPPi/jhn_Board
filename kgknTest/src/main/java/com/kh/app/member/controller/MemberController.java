@@ -19,6 +19,8 @@ public class MemberController {
 	
 	private MemberService ms;
 	
+	public static final String loginMember = "loginMember";
+	
 	@Autowired 
 	public MemberController(MemberService ms) {
 		this.ms = ms;
@@ -53,19 +55,19 @@ public class MemberController {
 	}
 	
 	@PostMapping("login")
-	public String login(MemberVo vo, Model model,HttpSession s) {
+	public String login(MemberVo vo,HttpSession s) {
 		
 		MemberVo loginMember = ms.login(vo);
 		
-		model.addAttribute("msg", "로그인");
 		
-		s.setAttribute("loginMember", loginMember);
-		
-		if(loginMember == null) {
+		if(loginMember != null) {
+			s.setAttribute("loginMember", loginMember);
+			return "redirect:/list/boardList";
+		}else {
 			return "common/error";
 		}
 		
-		return "redirect:/main";
+		
 		
 	}
 }

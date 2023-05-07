@@ -5,11 +5,11 @@
 <mapper namespace="memberMapper">
   
   <insert id="join">
-  	INSERT INTO MEMBER(MEMBER_ID, MEMBER_PWD, ENROLL_DATE) 
-	VALUES(#{memberId},#{memberPwd}, SYSDATE)
+  	INSERT INTO MEMBER(ID, PWD, ENROLLDATE) 
+	VALUES(#{id},#{pwd}, SYSDATE)
   </insert>
   
   <select id="login" resultType="com.kh.app.member.vo.MemberVo">
-  	SELECT * FROM MEMBER WHERE MEMBER_ID = #{memberId} AND MEMBER_PWD = #{memberPwd}
+  	SELECT * FROM MEMBER WHERE ID = #{id} AND PWD = #{pwd}
   </select>
 </mapper>

@@ -1,20 +1,21 @@
 @charset "UTF-8";
 
+body{
+	background-color: antiquewhite;
+}
 .list-main{
     width: 1100px;
     height:1100px;
     margin:0 auto;
 	display: flex;
-	margin-top: 300px;
+	margin-top: 100px;
 	
-    
     
 }
 
 .detail-list{
 	width: 1000px;
 	height: 600px;
-	border: 1px solid red;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -24,31 +25,95 @@
 .title-section{
 	width: 700px;
 	height: 50px;
-	border: 1px solid red;
+	border-bottom: 2px solid gray;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
 }
+.title-name{
+	width: 150px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+}
 .title-input{
 	width: 700px;
 	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: medium;
+	border: none;
+	background-color: antiquewhite;
+	
 
+}
+.title-circle{
+	width: 50px;
+	height: 40px;
+	border-radius: 2rem;
+	background-color: rgb(202, 171, 231);
+	position: relative;
+	bottom: 23px;
+	left: 10px;
 }
 .content-section{
 	width: 700px;
-	height: 450px;
-	border: 1px solid red;
+	height: 350px;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
+	font-size: medium;
 
 
 }
 .backBtn{
 	width: 700px;
 	height: 100px;
-	border: 1px solid red;
+	display: flex;
+	justify-content: flex-end;
 
+
+}
+
+.write-input{
+	border: none;
+	background-color:  rgb(184, 236, 195);
+	font-size: small;
+	font-weight: 700;
+	width: 50px;
+	height: 50px;
+	border-radius: 2rem;
+	margin-right: 15px;
+	margin-top: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn-to{
+	width: 50px;
+	height: 50px;
+	border-radius: 2rem;
+	background-color: rgb(184, 236, 195);
+	font-size: small;
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+	
+
+}
+a{
+	text-decoration-line: none;
+	text-decoration: black;
+}
+.text-area{
+	width: 700px;
+	height: 345px;
+	background-color: rgb(252, 236, 239);
+	border: none;
 
 }

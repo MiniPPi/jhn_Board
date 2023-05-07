@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+body{
+	background-color: #f8faea;
+}
+.main{
+    width: 1100px;
+    height: auto;
+    margin:0 auto;
+    margin-left: 200px;
+}
+
+.big-circle{
+    width: 500px;
+    height: 500px;
+    border-radius: 20rem;
+    background-color: rgb(248, 234, 245);
+    margin-left: 550px;
+    position: absolute;
+    bottom: 400px;
+    left: 150px;
+    
+
+   
+}
+.square{
+    width: 350px;
+    height: 300px;
+    background-color: rgb(253, 166, 157);
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 350px;
+    top:500px;
+
+    
+}
+.small-square{
+    width: 350px;
+    height: 180px;
+    margin-left: 10px;
+    
+}
+.join-sec,.login-sec,.list-sec{
+    width: 350px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.circle1{
+    width: 30px;
+    height: 30px;
+    border-radius: 2rem;
+    background-color: rgb(247, 244, 217);
+
+}
+.circle2{
+    width: 30px;
+    height: 30px;
+    border-radius: 2rem;
+    background-color: rgb(245, 216, 238);
+
+}
+.circle3{
+    width: 30px;
+    height: 30px;
+    border-radius: 2rem;
+    background-color: rgb(234, 220, 248);
+
+}
+.join-part,.login-part,.list-part{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center ;
+    margin-left: 15px;
+
+}
+a{
+    text-decoration-line: none;
+   
+}

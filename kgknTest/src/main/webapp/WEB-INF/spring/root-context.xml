@@ -11,13 +11,22 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<!-- commons-dbcp2 > dbcp -->
-	<bean id="dbcpSource" class="org.apache.commons.dbcp2.BasicDataSource">
+	<bean id="dataSourceSpied" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
 		<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:orcl"/>
 		<property name="username" value="C##SPRING"/>
 		<property name="password" value="1234"/>
 	</bean>
-	
+
+	<bean id="dbcpSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
+		<constructor-arg ref="dataSourceSpied" />
+		<property name="logFormatter">
+			<bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
+				<property name="loggingType" value="MULTI_LINE" />
+				<property name="sqlPrefix" value="SQL LINE : " />
+			</bean>
+		</property>
+	</bean>
 	<!-- SqlSessionFactoryBean -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dbcpSource"/>
@@ -33,5 +42,11 @@
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
       <property name="dataSource" ref="dbcpSource"></property><!--프로퍼티는   -->
    </bean>
+   
+   	<!-- 필터 -->
+	<bean id="utf8EncodingFilter" class="org.springframework.web.filter.CharacterEncodingFilter">
+		<constructor-arg name="encoding" value="UTF-8"/>
+	</bean>
+	
    	
 </beans>

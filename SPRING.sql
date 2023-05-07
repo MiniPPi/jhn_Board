@@ -1,0 +1,96 @@
+CREATE TABLE "LIST" (
+    "NO" NUMBER NOT NULL,
+    "ID" VARCHAR2(100) NOT NULL,
+    "TITLE" VARCHAR2(100) NOT NULL,
+    "CONTENT" VARCHAR2(4000) NOT NULL,
+    "ENROLLDATE" TIMESTAMP DEFAULT SYSDATE
+    
+);
+
+CREATE SEQUENCE SEQ_LIST_NO NOCACHE NOCYCLE;
+
+CREATE TABLE "MEMBER" (
+    
+    "ID" VARCHAR2(100) NOT NULL,
+    "PWD" VARCHAR2(100) NOT NULL,
+    "ENROLLDATE" TIMESTAMP DEFAULT SYSDATE
+    
+);
+
+
+
+--------------------------------------------------------------------------------
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick02','우와',
+'안녕하세요. 자바를 공부하고 있습니다. 자바 너무 어렵네요', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick03','오와',
+'안녕하세요. 파이썬을 공부하고 있습니다. 파이썬 너무 어렵네요', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick04','오오',
+'안녕하세요. 저도 자바를 공부하고 있습니다. 같이 공부해요', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick05','와와',
+'안녕하세요. 스프링을 공부하고 있습니다. 스프링 너무 어렵네요. 스프링에 대해 좀 아시는 분 계신가요.', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick06','우와',
+'안녕하세요. 자바스크립트를 공부하고 있습니다. 자바스크립트 너무 어렵네요', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick07','우와',
+'안녕하세요. 자바를 공부하고 있습니다. 자바 너무 어렵네요', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick08','오와',
+'안녕하세요. 파이썬을 공부하고 있습니다. 파이썬 너무 어렵네요', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick09','오오',
+'안녕하세요. 저도 자바를 공부하고 있습니다. 같이 공부해요', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick10','와와',
+'안녕하세요. 스프링을 공부하고 있습니다. 스프링 너무 어렵네요. 스프링에 대해 좀 아시는 분 계신가요.', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick11','우와',
+'안녕하세요. 자바스크립트를 공부하고 있습니다. 자바스크립트 너무 어렵네요', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick02','우와',
+'안녕하세요. 오늘 스프링으로 게시판을 만들었습니다. 스프링 안 쓸걸 그랬네요.', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick03','오와',
+'안녕하세요. 파이썬을 하루 빨리 공부해서 딥러닝, 머신러닝 이런 것들도 배워야하는데..', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick04','오오',
+'안녕하세요. 저도 게시판 더 예쁘게 만들고 싶은데 아이디어가 부족하네요.', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick05','와와',
+'안녕하세요. 스프링을 공부하고 있습니다. 스프링 너무 어렵네요. 스프링에 대해 좀 아시는 분 계신가요.', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick06','우와',
+'안녕하세요. 자바스크립트를 공부하고 있습니다. 자바스크립트로 이것저것 만들어 봐야겠는데', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick07','우와',
+'안녕하세요. 자바를 공부하고 있는데 배우면 배울 수록 어렵군요.', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick08','오와',
+'안녕하세요. 파이썬을 공부하고 있습니다. 파이썬 너무 어렵네요', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick09','오오',
+'안녕하세요. 저도 자바를 공부하고 있습니다. 같이 공부해요', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick10','와와',
+'안녕하세요. 스프링을 공부하고 있습니다. 스프링 너무 어렵네요. 스프링에 대해 좀 아시는 분 계신가요.', SYSDATE);
+INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+VALUES(SEQ_LIST_NO.NEXTVAL,'nick11','우와',
+'안녕하세요. 자바스크립트를 공부하고 있습니다. 자바스크립트 너무 어렵네요', SYSDATE);
+-----------------------------------------------------------------------------------
+
+INSERT INTO MEMBER(ID, PWD, ENROLLDATE) VALUES('nick02','1234', SYSDATE);
+INSERT INTO MEMBER(ID, PWD, ENROLLDATE) VALUES('nick03','1234', SYSDATE);
+INSERT INTO MEMBER(ID, PWD, ENROLLDATE) VALUES('nick04','1234', SYSDATE);
+INSERT INTO MEMBER(ID, PWD, ENROLLDATE) VALUES('nick05','1234', SYSDATE);
+INSERT INTO MEMBER(ID, PWD, ENROLLDATE) VALUES('nick06','1234', SYSDATE);
+INSERT INTO MEMBER(ID, PWD, ENROLLDATE) VALUES('nick07','1234', SYSDATE);
+INSERT INTO MEMBER(ID, PWD, ENROLLDATE) VALUES('nick08','1234', SYSDATE);
+INSERT INTO MEMBER(ID, PWD, ENROLLDATE) VALUES('nick09','1234', SYSDATE);
+INSERT INTO MEMBER(ID, PWD, ENROLLDATE) VALUES('nick10','1234', SYSDATE);
+INSERT INTO MEMBER(ID, PWD, ENROLLDATE) VALUES('nick11','1234', SYSDATE);
+
+commit;

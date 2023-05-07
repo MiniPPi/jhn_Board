@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>성공</h1>
+	<h1>회원 가입이 되었습니다</h1>
 	<h3>${msg}</h3>
 </body>
 </html>

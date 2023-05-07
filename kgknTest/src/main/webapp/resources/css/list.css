@@ -1,47 +1,138 @@
 @charset "UTF-8";
 
+body{
+	background-color: #ecfcf1;
+}
 .list-main{
     width: 1100px;
     height:auto;
     margin:0 auto;
 	display: flex;
+	flex-direction: column;
     
     
 }
 .button-section{
 	width:1000px;
-	height: 200px;
-	border: 1px solid red;
+	height: 150px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	margin-top: 50px;
 	
 	
 	
+}
+.write-button{
+	width: 50px;
+	height: 50px;
+	border-radius: 2rem;
+	background-color: rgb(237, 243, 187);
+	text-decoration-line: none;
+	text-decoration: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 15px;
+	font-size: small;
+	font-weight: 700;
 }
 .list-section{
 	width: 1000px;
 	height: 800px;
-	border: 1px solid red;
 	display: flex;
-	align-items: flex-end;
+	flex-direction: column;
+	
 }
 
 .list-all{
-	width: auto;
+	width: 1000px;
 	height: 450px;
-	border: 1px solid red;
+	
 
+}
+.list-title{
+	width: 1000px;
+	height: 70px;
+	border-bottom: 2px solid gray;
+	display: flex;
 }
 .boardList{
 
-	width: auto;
+	width: 1000px;
 	height: 45px;
-	border: 1px solid red;
+	display: flex;
 
+}
+.no{
+	width: 50px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+}
+.id{
+	width: 150px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+}
+.title{
+	width: 550px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+}
+
+.date{
+	width: 250px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+}
+.no1{
+	width: 50px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.id1{
+	width: 150px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.title1{
+	width: 550px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.date1{
+	display: flex;
+	width: 250px;
+	height: 45px;
+	justify-content: center;
+	align-items: center;
 }
 .page-section{
 
-	width: 600;
+	width: 1000px;
 	height: 40px;
-	border: 1px solid red;
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
 
 }
 
@@ -57,9 +148,26 @@
 	width:40px;
 	height:40px;
 	border-radius:1rem;
-	border:2px solid lightgray;
+	background-color:  rgb(235, 232, 232);
 	text-align:center;
 	line-height:40px;
 	margin-right:10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+a{
+	text-decoration-line: none;
+	text-decoration: black;
+}
+.name3,.name4,.name5,.name6{
+	width: 50px;
+	height: 50px;
+	border-radius: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	background-color: blanchedalmond;
 }
 

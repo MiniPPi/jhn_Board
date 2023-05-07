@@ -7,8 +7,8 @@ import lombok.Data;
 @Data
 public class ListVo {
 	
-	private int no;
-	private String writer;
+	private String no;
+	private String id;
 	private String title;
 	private String content;
 	private Timestamp enrollDate;
@@ -16,25 +16,25 @@ public class ListVo {
 	public ListVo() {
 		
 	}
-	public ListVo(int no, String writer, String title, String content, Timestamp enrollDate) {
+	public ListVo(String no, String id, String title, String content, Timestamp enrollDate) {
 		super();
 		this.no = no;
-		this.writer = writer;
+		this.id = id;
 		this.title = title;
 		this.content = content;
 		this.enrollDate = enrollDate;
 	}
-	public int getNo() {
+	public String getNo() {
 		return no;
 	}
-	public void setNo(int no) {
+	public void setNo(String no) {
 		this.no = no;
 	}
-	public String getWriter() {
-		return writer;
+	public String getId() {
+		return id;
 	}
-	public void setWriter(String writer) {
-		this.writer = writer;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getTitle() {
 		return title;
@@ -53,6 +53,11 @@ public class ListVo {
 	}
 	public void setEnrollDate(Timestamp enrollDate) {
 		this.enrollDate = enrollDate;
+	}
+	@Override
+	public String toString() {
+		return "ListVo [no=" + no + ", id=" + id + ", title=" + title + ", content=" + content + ", enrollDate="
+				+ enrollDate + "]";
 	}
 	
 	

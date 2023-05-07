@@ -6,7 +6,7 @@
 
 <select id="boardList" resultType="com.kh.app.vo.ListVo">
       
- 	  SELECT NO,TITLE,ENROLLDATE,ID AS WRITER FROM LIST ORDER BY NO DESC  
+ 	  SELECT NO,TITLE,ENROLLDATE,ID,CONTENT FROM LIST ORDER BY NO DESC  
        
       
   </select>
@@ -16,8 +16,31 @@
   </select>
   
   <insert id="boardWrite">
-          INSERT INTO FAQ (NO,ID,TITLE,CONTENT,ENROLL_DATE) 
-        VALUES(SEQ_LIST_NO.NEXTVAL,#{writer},#{title},
+          INSERT INTO LIST (NO,ID,TITLE,CONTENT,ENROLLDATE) 
+        VALUES(SEQ_LIST_NO.NEXTVAL,#{id},#{title},
         #{content}, SYSDATE)
   </insert>
+  
+  <select id="selectOne" resultType="com.kh.app.vo.ListVo">
+  	SELECT ID, TITLE, CONTENT FROM LIST WHERE NO = #{no}
+  </select>
+  
+  <select id="boardListRelated" parameterType="java.util.Map" resultType="com.kh.app.vo.ListVo">
+  SELECT * FROM LIST
+  WHERE 
+  <foreach collection="wordCount" index="word" separator="OR">
+      CONTENT LIKE '%' || #{word} || '%'
+  </foreach>
+  ORDER BY NO DESC FETCH FIRST 5 ROWS ONLY
+</select>
+
+
+<select id="selectBoard" parameterType="java.lang.String" resultType="com.kh.app.vo.ListVo">
+    SELECT * FROM LIST WHERE NO =#{no}
+</select>
+
+<select id="getBoard" resultType="com.kh.app.vo.ListVo">
+  	SELECT ID, TITLE, CONTENT FROM LIST WHERE NO = #{no}
+  </select>
+
 </mapper>

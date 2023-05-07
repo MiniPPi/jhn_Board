@@ -2,37 +2,29 @@ package com.kh.app.member.vo;
 
 public class MemberVo {
 	
-	private String memberId;
-	private String memberPwd;
-	private String memberNick;
+	private String id;
+	private String pwd;
 	private String enrollDate;
 	public MemberVo() {
 		super();
 	}
-	public MemberVo(String memberId, String memberPwd, String memberNick, String enrollDate) {
+	public MemberVo(String id, String pwd, String enrollDate) {
 		super();
-		this.memberId = memberId;
-		this.memberPwd = memberPwd;
-		this.memberNick = memberNick;
+		this.id = id;
+		this.pwd = pwd;
 		this.enrollDate = enrollDate;
 	}
-	public String getMemberId() {
-		return memberId;
+	public String getId() {
+		return id;
 	}
-	public void setMemberId(String memberId) {
-		this.memberId = memberId;
+	public void setId(String id) {
+		this.id = id;
 	}
-	public String getMemberPwd() {
-		return memberPwd;
+	public String getPwd() {
+		return pwd;
 	}
-	public void setMemberPwd(String memberPwd) {
-		this.memberPwd = memberPwd;
-	}
-	public String getMemberNick() {
-		return memberNick;
-	}
-	public void setMemberNick(String memberNick) {
-		this.memberNick = memberNick;
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
 	}
 	public String getEnrollDate() {
 		return enrollDate;
@@ -40,7 +32,11 @@ public class MemberVo {
 	public void setEnrollDate(String enrollDate) {
 		this.enrollDate = enrollDate;
 	}
+	@Override
+	public String toString() {
+		return "MemberVo [id=" + id + ", pwd=" + pwd + ", enrollDate=" + enrollDate + "]";
+	}
 	
 	
-
 }
+	
